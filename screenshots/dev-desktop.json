@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "SITO — Super Intelligence Token",
+      "hasCanvas": false,
+      "bodyTextLen": 2462,
+      "bodyTextHash": "f874901c956f2fb5edb91cf8a18611c6513541c7d22f70141848c0d3a2d0afc4",
+      "bodyTextPrefix": "SITO Super Intelligence Chart Thesis TARC Buy 7ps8…pump Buy SOLA",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/dev-desktop.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "SITO — Super Intelligence Token",
+      "hasCanvas": false,
+      "bodyTextLen": 2402,
+      "bodyTextHash": "b9f8663d41d0c8f4d5e513cc9e281c5feaef46252dc5c300be7f32ae7630f68d",
+      "bodyTextPrefix": "SITO Super Intelligence 7ps8…pump Buy Chart Thesis TARC Buy SOLA",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/dev-desktop-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/dev-desktop.json"
+}
