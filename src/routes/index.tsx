@@ -23,11 +23,11 @@ function Home() {
       <Header />
       <main className="mx-auto flex max-w-6xl flex-col gap-20 px-4 py-10 sm:px-6 sm:py-16">
         <Hero />
+        <Whitepaper />
         <LiveChart />
         <Thesis />
         <Tarc />
         <Facts />
-        <Whitepaper />
         <Buy />
       </main>
       <footer className="border-t border-line">
@@ -66,7 +66,7 @@ function Header() {
             href={WHITEPAPER_VIEW_URL}
             target="_blank"
             rel="noreferrer"
-            className="hidden min-h-11 items-center gap-2 rounded-full border border-line px-4 text-sm font-medium text-fg hover:border-copper lg:inline-flex"
+            className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line px-4 text-sm font-medium text-fg hover:border-copper"
           >
             <FileText className="size-4 text-copper" aria-hidden="true" />
             Whitepaper
