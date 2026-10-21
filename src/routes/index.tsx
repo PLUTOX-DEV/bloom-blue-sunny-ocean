@@ -1,15 +1,19 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Check, Copy, Cpu, ShieldCheck, TrainFront } from "lucide-react";
+import { ArrowDownToLine, ArrowUpRight, Check, Copy, Cpu, FileText, ShieldCheck, TrainFront } from "lucide-react";
 import { LiveChart } from "@/components/live-chart";
 import { SITO, shortMint } from "@/lib/sito";
 
 export const Route = createFileRoute("/")({ component: Home });
 
+const WHITEPAPER_VIEW_URL = "https://drive.google.com/file/d/1zstMm7Qpv102vJLHo6yCM5qz3PMIcVXz/view?usp=drive_link";
+const WHITEPAPER_DOWNLOAD_URL = "https://drive.google.com/uc?export=download&id=1zstMm7Qpv102vJLHo6yCM5qz3PMIcVXz";
+
 const NAV = [
   { href: "#chart", label: "Chart" },
   { href: "#thesis", label: "Thesis" },
   { href: "#tarc", label: "TARC" },
+  { href: "#whitepaper", label: "Whitepaper" },
   { href: "#buy", label: "Buy" },
 ];
 
@@ -23,6 +27,7 @@ function Home() {
         <Thesis />
         <Tarc />
         <Facts />
+        <Whitepaper />
         <Buy />
       </main>
       <footer className="border-t border-line">
@@ -234,6 +239,51 @@ function Facts() {
         <TextLink href={SITO.solscan}>Solscan</TextLink>
         <TextLink href={SITO.gecko}>GeckoTerminal</TextLink>
         <TextLink href={SITO.pump}>pump.fun</TextLink>
+      </div>
+    </section>
+  );
+}
+
+function Whitepaper() {
+  return (
+    <section id="whitepaper" className="scroll-mt-28">
+      <div className="relative overflow-hidden rounded-card border border-line bg-surface p-6 sm:p-8 lg:p-10">
+        <div className="pointer-events-none absolute -right-12 -top-16 size-56 rounded-full bg-copper/10 blur-3xl" />
+        <div className="relative grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
+          <div>
+            <p className="text-sm font-medium tracking-wide text-copper uppercase">Read the details</p>
+            <div className="mt-3 flex items-center gap-3">
+              <span className="flex size-12 items-center justify-center rounded-2xl border border-line bg-bg">
+                <FileText className="size-6 text-copper" aria-hidden="true" />
+              </span>
+              <h2 className="font-display text-3xl sm:text-4xl">SITO Whitepaper</h2>
+            </div>
+            <p className="mt-4 max-w-2xl text-muted">
+              Explore the SITO whitepaper for more information about the project. The document is hosted on Google Drive.
+            </p>
+            <p className="mt-2 text-xs text-muted">Please review the document and verify project details independently.</p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={WHITEPAPER_VIEW_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex min-h-12 items-center gap-2 rounded-full border border-line px-5 text-sm font-medium text-fg hover:border-copper"
+            >
+              Read whitepaper
+              <ArrowUpRight className="size-4" aria-hidden="true" />
+            </a>
+            <a
+              href={WHITEPAPER_DOWNLOAD_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex min-h-12 items-center gap-2 rounded-full bg-copper px-5 text-sm font-medium text-bg"
+            >
+              Download PDF
+              <ArrowDownToLine className="size-4" aria-hidden="true" />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
