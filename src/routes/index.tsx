@@ -62,6 +62,15 @@ function Header() {
           ))}
         </nav>
         <div className="ml-auto flex items-center gap-2">
+          <a
+            href={WHITEPAPER_VIEW_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden min-h-11 items-center gap-2 rounded-full border border-line px-4 text-sm font-medium text-fg hover:border-copper lg:inline-flex"
+          >
+            <FileText className="size-4 text-copper" aria-hidden="true" />
+            Whitepaper
+          </a>
           <CopyMint compact />
           <a
             href={SITO.jupiter}
